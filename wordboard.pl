@@ -239,9 +239,9 @@ sub run_generation {
     # deleted just in case you want it.
     #
     # Make sure that ELI gets placed first
-    my $eli_index = first_index { /eli/ } @shuffled_names;
-    $shuffled_names[$eli_index] = $shuffled_names[0];
-    $shuffled_names[0] = "eli";
+    #my $eli_index = first_index { /eli/ } @shuffled_names;
+    #$shuffled_names[$eli_index] = $shuffled_names[0];
+    #$shuffled_names[0] = "eli";
 
     my $i = 1;
     foreach $name (@shuffled_names) {

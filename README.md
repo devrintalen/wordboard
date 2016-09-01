@@ -36,46 +36,46 @@ with the most names it's been able to place.  As soon as an
 arrangement is found that places all the names the script will exit
 and show the solution:
 
-    Finished on generation 103
+    Finished on generation 1488                         
     
     Placed names (15 x 15):
-      M     E   M i c h a e l     
-      a     t                     
-      s     h   S       C     W   
-      o   J a c o b     h     i   
-      n     n   p   M i a     l   
-    A   E       h       r     l   
-    v   m   A b i g a i l     i   
-    a   m   l   a       o     a   
-      J a m e s         t     m   
-            x           t   L     
-    E   N o a h         e l i     
-    m       n               a     
-    i       d     B e n j a m i n 
-    l       e                     
-    y   H a r p e r   O l i v i a 
+    E m i l y   A v a         L   
+                b     S o p h i a 
+        W i l l i a m         a   
+                g             m   
+      O   C   H a r p e r         
+      l   h     i           B     
+      i   a   A l e x a n d e r   
+      v   r                 n     
+      i   l                 j     
+    J a c o b       M i c h a e l 
+          t   E m m a       m     
+          t         s     M i a   
+    J a m e s     N o a h   n     
+                    n             
+    I s a b e l l a   E t h a n   
     
     Answer key:
-    eli	(10,10)	left/right
-    Liam	(12,9)	up/down
-    Charlotte	(10,2)	up/down
-    Mia	(8,4)	left/right
-    Abigail	(4,6)	left/right
-    Sophia	(6,2)	up/down
-    Jacob	(3,3)	left/right
-    Benjamin	(7,12)	left/right
-    Ethan	(4,0)	up/down
-    Alexander	(4,6)	up/down
-    Noah	(2,10)	left/right
-    Ava	(0,5)	up/down
-    Olivia	(9,14)	left/right
-    James	(1,8)	left/right
-    Harper	(2,14)	left/right
-    Michael	(6,0)	left/right
-    William	(13,2)	up/down
-    Emily	(0,10)	up/down
-    Mason	(1,0)	up/down
-    Emma	(2,5)	up/down
+    Jacob	(0,9)	left/right
+    Charlotte	(3,4)	up/down
+    Olivia	(1,4)	up/down
+    Mason	(8,9)	up/down
+    James	(0,12)	left/right
+    Alexander	(5,6)	left/right
+    Benjamin	(12,5)	up/down
+    Abigail	(6,0)	up/down
+    William	(2,2)	left/right
+    Sophia	(9,1)	left/right
+    Emma	(5,10)	left/right
+    Harper	(5,4)	left/right
+    Ethan	(9,14)	left/right
+    Isabella	(0,14)	left/right
+    Michael	(8,9)	left/right
+    Mia	(11,11)	left/right
+    Noah	(7,12)	left/right
+    Liam	(13,0)	up/down
+    Emily	(0,0)	left/right
+    Ava	(6,0)	left/right
 
 The format of the answer key is:
 
