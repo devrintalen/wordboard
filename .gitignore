@@ -1,5 +1,7 @@
 # For your own specific names files:
 names_*.txt
 
+results.txt
+
 # Other
 *~

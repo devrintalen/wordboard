@@ -83,6 +83,11 @@ The format of the answer key is:
 
 Where (0,0) is the top-left of the board.
 
+While the script is running it will output the best board so far to a
+file named `results.txt`.  This is to save progress and give you
+something to use in case you demand too much of it and it simply never
+finds a solution to placing all the names in the board size you want.
+
 Tweaking
 --------
 
