@@ -1,2 +1,5 @@
-names*.txt
+# For your own specific names files:
+names_*.txt
+
+# Other
 *~

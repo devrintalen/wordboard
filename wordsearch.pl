@@ -1,5 +1,21 @@
 #!/usr/bin/perl
 
+# wordsearch.pl: generate scrabble-style boards
+# Copyright (C) 2016  Devrin Talen
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 use List::Util 'shuffle';
 use List::Util 'max';
 use List::MoreUtils 'first_index';
@@ -10,7 +26,7 @@ while (chop($line = <NAMES>)) {
     push @names, $line;
 }
 
-$SIZE = 21;
+$SIZE = 15;
 my @ws;
 my @answers;
 
@@ -30,12 +46,17 @@ sub place_name {
 	redo if (($dir == 0) && ($x + length($name) > $SIZE));
 	redo if (($dir == 1) && ($y + length($name) > $SIZE));
 
+	# Here's a special case for the thing I wrote this script for.
+	# It's commented out, but if you have some guy named eli that
+	# you want at location (8,9) going sideways then knock
+	# yourself out.
+	#
 	# Special case: ELI
-	if ($name eq "eli") {
-	    $x = 8;
-	    $y = 9;
-	    $dir = 0;
-	}
+	#if ($name eq "eli") {
+	#    $x = 8;
+	#    $y = 9;
+	#    $dir = 0;
+	#}
 
 	if ($dir == 0) {
 	    #print "Trying location ($x, $y), left to right\n";
@@ -214,7 +235,10 @@ sub run_generation {
     my @shuffled_names = shuffle(@names);
     my $total = scalar(@shuffled_names);
 
-    # But make sure that ELI gets placed first
+    # Same deal as before, this code is specific to my needs but not
+    # deleted just in case you want it.
+    #
+    # Make sure that ELI gets placed first
     my $eli_index = first_index { /eli/ } @shuffled_names;
     $shuffled_names[$eli_index] = $shuffled_names[0];
     $shuffled_names[0] = "eli";
@@ -262,7 +286,7 @@ my $best_so_far = 0;
 my $total_names = scalar(@names);
 $| = 1;
 while ($placed_names != $total_names) {
-    print "\rRunning generation $generations... (best so far $best_so_far/$total_names)";
+    print "Running generation $generations... (best so far $best_so_far/$total_names)      \r";
     $placed_names = run_generation();
     if ($placed_names > $best_so_far) {
 	$best_so_far = $placed_names;
@@ -292,6 +316,8 @@ while ($placed_names != $total_names) {
     }
     $generations++;
 }
+
+print "Finished on generation $generations                        \n\n";
 
 # Print out the wordsearch
 print "Placed names ($SIZE x $SIZE):\n";
