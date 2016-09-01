@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# wordsearch.pl: generate scrabble-style boards
+# wordboard.pl: generate scrabble-style boards
 # Copyright (C) 2016  Devrin Talen
 #
 # This program is free software: you can redistribute it and/or modify
